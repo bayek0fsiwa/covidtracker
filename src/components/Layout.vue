@@ -2,10 +2,9 @@
   <div class="layout">
     <v-navigation-drawer
       v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
       fixed
       app
+      color="warning"
     >
       <v-list>
         <v-list-item
@@ -24,18 +23,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar :clipped-left="clipped" fixed app color="warning">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-btn href="https://www.covid19api.org/" target="_blank">
       <v-icon>notranslate mdi mdi-virus theme--light</v-icon>
+      API
       </v-btn>
     </v-app-bar>
-    <v-footer app>
+    <v-footer app color="warning">
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </div>
@@ -54,7 +51,7 @@ export default {
           to: "/",
         },
         {
-          icon: "mdi-chart-bubble",
+          icon: "mdi-graph",
           title: "Graph",
           to: "/graph",
         },
