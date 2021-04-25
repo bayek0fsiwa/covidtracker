@@ -1,5 +1,7 @@
 <template>
   <div class="graph">
-    <h1>This is an graph page</h1>
+    <v-container>
+      <h2>Graph Page</h2>
+    </v-container>
   </div>
 </template>
