@@ -2,7 +2,7 @@
   <div class="home">
     <v-container>
       <v-main  v-if="!loading">
-        Show Data
+        <DataTitle :text="title" :dataDate="dataDate" />
       </v-main>
       <v-main  v-else>
         <h2>Loading Data</h2>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-
+import DataTitle from '@/components/DataTitle'
 
 export default {
   name: 'Home',
@@ -28,7 +28,7 @@ export default {
     loadingImage: require('../assets/logo.png')
     }
   },
-  components: {},
+  components: { DataTitle },
   methods: {
     async covidData() {
       const response = await fetch('https://api.covid19api.com/summary')
