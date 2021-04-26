@@ -4,6 +4,7 @@
       <v-main  v-if="!loading">
         <DataTitle :text="title" :dataDate="dataDate" />
         <DataCards :stats="stats" />
+        <Countries :countries="countries" />
       </v-main>
       <v-main  v-else>
         <h2>Loading Data</h2>
@@ -16,6 +17,7 @@
 <script>
 import DataTitle from '@/components/DataTitle'
 import DataCards from '@/components/DataCards'
+import Countries from '@/components/Countries'
 
 export default {
   name: 'Home',
@@ -30,7 +32,7 @@ export default {
     loadingImage: require('../assets/logo.png')
     }
   },
-  components: { DataTitle, DataCards },
+  components: { DataTitle, DataCards, Countries },
   methods: {
     async covidData() {
       const response = await fetch('https://api.covid19api.com/summary')
