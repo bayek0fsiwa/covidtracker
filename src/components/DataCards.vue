@@ -1,7 +1,7 @@
 <template>
   <!-- card 1 -->
   <div>
-    <v-card elevation="1">
+    <v-card elevation="5">
       <v-card-title>
         Cases
       </v-card-title>

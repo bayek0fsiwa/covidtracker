@@ -1,6 +1,6 @@
 <template>
   <div class="data-title">
-      <v-card elevation="1">
+      <v-card elevation="5">
         <v-card-title>
             {{text}}
         </v-card-title>
