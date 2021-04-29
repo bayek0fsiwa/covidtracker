@@ -22,6 +22,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Dependencies & Build
         run: |
+          npm install --global yarn
           yarn install,
           yarn build,
           yarn lint
