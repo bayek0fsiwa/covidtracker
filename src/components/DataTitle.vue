@@ -1,9 +1,13 @@
 <template>
   <div class="data-title">
-      <h2>{{text}}</h2>
-      <div>
-          {{dataDate}}
-      </div>
+      <v-card elevation="1">
+        <v-card-title>
+            {{text}}
+        </v-card-title>
+        <v-card-subtitle>
+            {{dataDate}}
+        </v-card-subtitle>
+      </v-card>
   </div>
 </template>
 
